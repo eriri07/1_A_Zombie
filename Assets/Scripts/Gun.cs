@@ -2,7 +2,18 @@
 using UnityEngine;
 
 // 총을 구현
-public class Gun : MonoBehaviour {
+public class Gun : MonoBehaviour 
+{
+
+    public AudioClip shotClip;
+    public AudioClip reloadClip;
+
+    public float damage = 25;
+    public int magCapacity = 25;
+
+    public float timebetFire = 0.12f;
+    public float reloadTime = 1.8f;
+
     // 총의 상태를 표현하는 데 사용할 타입을 선언
     public enum State {
         Ready, // 발사 준비됨
